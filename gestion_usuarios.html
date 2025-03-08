@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios</title>
+    <link rel="stylesheet" href="CSS/gestion_usuarios.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2 class="logo">SIGA <span>UPAEP</span></h2>
+        <ul>
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="planeacion.html">Planeación Académica</a></li>
+            <li><a href="materias.html">Materias y Programas</a></li>
+            <li><a href="#">Estudiantes</a></li>
+            <li class="active"><a href="#">Gestión de Usuarios</a></li>
+        </ul>
+        <div class="logout">
+            <a href="login.html">Salir</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Gestión de Usuarios</h1>
+
+        <div class="table-container">
+            <div class="table-header">
+                <h2>Todos los Usuarios</h2>
+                <div class="table-actions">
+                    <div class="search-container">
+                        <img src="Imagenes/buscar.svg" class="search-icon">
+                        <input type="text" id="searchUser" placeholder="Buscar">
+                    </div>
+                    <select id="userFilter">
+                        <option value="todos">Filtro: Sin filtro</option>
+                        <option value="decanato">Decanato</option>
+                    </select>
+                    <img src="Imagenes/añadir_usuario.svg" class="add-icon">
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Apellido</th>
+                        <th>Nombre</th>
+                        <th>ID</th>
+                        <th>Facultad</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="userTable">
+                    <!-- Filas generadas dinámicamente -->
+                </tbody>
+            </table>
+
+            <div class="pagination-info">
+                <p>Mostrando 2 de 2 registros</p>
+            </div>
+
+            <div class="pagination">
+                <button id="prevPage"><img src="Imagenes/anterior.svg"></button>
+                <span class="page-number">1</span>
+                <button id="nextPage"><img src="Imagenes/siguiente.svg"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para eliminar usuario -->
+<div id="deleteUserModal" class="modal">
+    <div class="modal-content">
+        <p id="modalMessage"></p>
+        <div class="modal-buttons">
+            <button id="confirmDelete" class="btn btn-danger">Sí</button>
+            <button id="cancelDelete" class="btn btn-secondary">No</button>
+        </div>
+    </div>
+</div>
+    <script src="JavaScript/gestion_usuarios.js"></script>
+</body>
+</html>

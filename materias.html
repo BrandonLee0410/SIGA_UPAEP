@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materias y Programas</title>
+    <link rel="stylesheet" href="CSS/materias.css">
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2 class="logo">SIGA <span>UPAEP</span></h2>
+        <ul>
+            <li><a href="dashboard.html">Inicio</a></li>
+            <li><a href="planeacion.html">Planeación Académica</a></li>
+            <li class="active"><a href="#">Materias y Programas</a></li>
+            <li><a href="#">Estudiantes</a></li>
+            <li><a href="gestion_usuarios.html">Gestión de Usuarios</a></li>
+        </ul>
+        <div class="logout">
+            <a href="login.html">Salir</a>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Materias y Programas</h1>
+
+        <div class="info-cards">
+            <div class="card">
+                <div class="icon-circle"><img src="Imagenes/programas.svg" alt="Programas"></div>
+                <div class="info-text">
+                    <span>Programas</span>
+                    <p>3</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon-circle"><img src="Imagenes/planes.svg" alt="Planes"></div>
+                <div class="info-text">
+                    <span>Planes</span>
+                    <p>4</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon-circle"><img src="Imagenes/materias1.svg" alt="Materias"></div>
+                <div class="info-text">
+                    <span>Materias</span>
+                    <p>200</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <h2>Todas las materias</h2>
+            <div class="table-actions">
+                <button class="btn">Agregar Plan</button>
+                <button class="btn">Eliminar Plan</button>
+                <div class="search-container">
+                    <img src="Imagenes/buscar.svg" class="search-icon">
+                    <input type="text" placeholder="Buscar">
+                </div>
+                <select>
+                    <option>Sin filtro</option>
+                    <option>Plan</option>
+                    <option>Estado</option>
+                    <option>Módulo</option>
+                </select>
+                <img src="Imagenes/exportar.svg" class="export-icon">
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Clave</th>
+                        <th>Módulo</th>
+                        <th>Asignatura</th>
+                        <th>Prerrequisitos</th>
+                        <th>Equivalencias</th>
+                        <th>Plan</th>
+                        <th>Estado</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="materiasTable">
+                    <!-- Datos generados por JavaScript -->
+                </tbody>
+            </table>
+            <div class="pagination-info">
+                <p>Mostrando datos 1 a 3 de 3 entradas</p>
+            </div>
+            <div class="pagination">
+                <button class="prev"><img src="Imagenes/anterior.svg"></button>
+                <span class="page-number">1</span>
+                <button class="next"><img src="Imagenes/siguiente.svg"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="JavaScript/materias.js"></script>
+</body>
+</html>
